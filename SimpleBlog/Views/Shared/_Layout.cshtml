@@ -18,11 +18,28 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="@Url.RouteUrl("home")">Simple Blog</a>
-
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p class="navbar-text">Welcome back, @User.Identity.Name</p>
+                }
+                
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav"></ul>
-                <a class="navbar-right navbar-link" style="padding:15px 15px" href="@Url.RouteUrl("login")">Login</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    
+                    <a class="navbar-link navbar-right" style="padding:15px 15px;" href="@Url.RouteUrl("logout")">Logout</a>
+
+                    if (User.IsInRole("admin"))
+                    {
+                        <a class="navbar-link navbar-right" style="padding:15px 15px;" href="@Url.Action("index","Posts", new {area="admin"})">View posts in admin</a>
+                    }
+                }
+                else
+                {
+                    <a class="navbar-link navbar-right" style="padding:15px 15px;" href="@Url.RouteUrl("login")">Login</a>
+                }
             </div>
         </div>
     </div>
