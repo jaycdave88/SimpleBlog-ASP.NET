@@ -13,12 +13,12 @@ namespace SimpleBlog.App_Start
         internal static void RegisterBundles(System.Web.Optimization.BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/admin/styles")
-             .Include("~/Content/bootstrap.css")
-             .Include("~/Content/Site.css"));
+             .Include("~/content/bootstrap.css")
+             .Include("~/content/Styles/admin.css"));
 
             bundles.Add(new StyleBundle("~/styles")
                 .Include("~/content/bootstrap.css")
-                .Include("~/content/site.css"));
+                .Include("~/content/styles/site.css"));
 
             bundles.Add(new ScriptBundle("~/admin/scripts")
                 .Include("~/scripts/jquery-2.2.0.js")
