@@ -5,7 +5,7 @@ using System.Web;
 using Microsoft.Web.Optimization;
 using System.Web.Optimization;
 
-namespace SimpleBlog.App_Start
+namespace SimpleBlog.FilterConfig
 {
     public class BundleConfig
     {
@@ -25,7 +25,8 @@ namespace SimpleBlog.App_Start
                 .Include("~/scripts/jquery.validate.js")
                 .Include("~/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/scripts/bootstrap.js")
-                .Include("~/scripts/modernizr-2.6.2.js"));
+                .Include("~/scripts/modernizr-2.6.2.js")
+                .Include("~/areas/admin/scripts/forms.js"));
 
             bundles.Add(new ScriptBundle("~/scripts")
                 .Include("~/scripts/jquery-2.2.0.js")

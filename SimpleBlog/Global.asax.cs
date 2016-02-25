@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using SimpleBlog.FilterConfig;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Microsoft.Web.Optimization;
-using System.Web.Optimization;
-using SimpleBlog.App_Start;
+using SimpleBlog.AppStart;
 
 namespace SimpleBlog
 {
@@ -17,8 +12,10 @@ namespace SimpleBlog
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(System.Web.Optimization.BundleTable.Bundles);
+            App_Start.FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 
             Database.Configure();
+           
         }
 
         protected void Application_BeginRequest()

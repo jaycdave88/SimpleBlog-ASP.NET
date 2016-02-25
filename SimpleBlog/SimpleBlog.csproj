@@ -157,6 +157,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Scripts\Forms.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -180,6 +181,9 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Users\New.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\ResetPassword.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -202,6 +206,7 @@
     <Compile Include="AppStart\JsAndCssBundlingAppStart.cs" />
     <Compile Include="App_Start\BundleCollection.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
@@ -215,6 +220,7 @@
     </Compile>
     <Compile Include="Infrastructure\RoleProvider.cs" />
     <Compile Include="Infrastructure\SelectedTabAttribute.cs" />
+    <Compile Include="Infrastructure\TransactionFilter.cs" />
     <Compile Include="Migrations\_001_UsersAndRoles.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

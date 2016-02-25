@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Optimization;
 
-namespace SimpleBlog.App_Start
+namespace SimpleBlog.FilterConfig
 {
     public class BundleCollection
     {
