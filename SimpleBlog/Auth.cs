@@ -9,7 +9,7 @@ namespace SimpleBlog
 {
     public class Auth
     {
-        private const string UserKey = "SimpleBlog.Auth.UserKe";
+        private const string UserKey = "SimpleBlog.Auth.UserKey";
 
         public static User User
         {
