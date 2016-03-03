@@ -29,7 +29,7 @@ namespace SimpleBlog.Migrations
 
         public override void Down()
         {
-            Delete.Table("roles_users");
+            Delete.Table("role_users");
             Delete.Table("users");
             Delete.Table("roles");
         }

@@ -15,7 +15,7 @@ namespace SimpleBlog.Migrations
         public override void Up()
         {
             Create.Table("posts")
-                .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+                .WithColumn("id").AsInt32().PrimaryKey().Identity()
                 .WithColumn("user_id").AsInt32().ForeignKey("users", "id")
                 .WithColumn("title").AsString(128)
                 .WithColumn("slug").AsString(128)
